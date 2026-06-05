@@ -97,6 +97,7 @@ src/
 | Specialized | Tarmac SL8 | 2024 | 44–61 (7) |
 | Specialized | Aethos | 2026 | 49–61 (6) |
 | Canyon | Ultimate CFR | 2024 | XS–XL (5) |
+| Canyon | Aeroad CFR | 2026 | 2XS–2XL (7) |
 | Canyon | Endurace CFR | 2026 | 2XS–XL (6) |
 | Giant | TCR Advanced SL | 2024 | XS–XL (6) |
 | Cervélo | R5 | 2024 | 44–61 (7) |
