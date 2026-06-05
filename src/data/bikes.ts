@@ -1395,6 +1395,96 @@ export const bikes: BikeModel[] = [
       },
     ],
   },
+
+  // ── Rose Shave FF 2026 ────────────────────────────────────────────────────
+  // Geometry from BikeInsights. Height ranges from rosebikes.nl product page.
+  {
+    id: 'rose-shave-ff-2026',
+    brand: 'Rose',
+    model: 'Shave FF',
+    year: 2026,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/rose+shave+ff+2026/',
+      tweedehands: 'https://www.2dehands.be/q/rose+shave+ff+2026/',
+    },
+    sizes: [
+      {
+        size: 'XS',
+        manufacturerHeightRange: [155, 166],
+        geometry: { stack: 515, reach: 375, headTubeAngle: 71.5, seatTubeAngle: 75.5, chainstayLength: 410, wheelbase: 969, bbDrop: 72, standoverHeight: 735, headTubeLength: 110, seatTubeLength: 435 },
+      },
+      {
+        size: 'S',
+        manufacturerHeightRange: [165, 175],
+        geometry: { stack: 532, reach: 385, headTubeAngle: 73.0, seatTubeAngle: 75.0, chainstayLength: 410, wheelbase: 975, bbDrop: 72, standoverHeight: 762, headTubeLength: 120, seatTubeLength: 470 },
+      },
+      {
+        size: 'M',
+        manufacturerHeightRange: [174, 181],
+        geometry: { stack: 547, reach: 392, headTubeAngle: 73.3, seatTubeAngle: 74.5, chainstayLength: 410, wheelbase: 985, bbDrop: 72, standoverHeight: 780, headTubeLength: 135, seatTubeLength: 492 },
+      },
+      {
+        size: 'M/L',
+        manufacturerHeightRange: [179, 186],
+        geometry: { stack: 567, reach: 400, headTubeAngle: 73.3, seatTubeAngle: 74.0, chainstayLength: 410, wheelbase: 998, bbDrop: 72, standoverHeight: 799, headTubeLength: 155, seatTubeLength: 512 },
+      },
+      {
+        size: 'L',
+        manufacturerHeightRange: [183, 193],
+        geometry: { stack: 591, reach: 412, headTubeAngle: 73.5, seatTubeAngle: 73.8, chainstayLength: 410, wheelbase: 1015, bbDrop: 72, standoverHeight: 823, headTubeLength: 180, seatTubeLength: 537 },
+      },
+      {
+        size: 'XL',
+        manufacturerHeightRange: [191, 200],
+        geometry: { stack: 616, reach: 430, headTubeAngle: 73.8, seatTubeAngle: 73.5, chainstayLength: 410, wheelbase: 1038, bbDrop: 72, standoverHeight: 854, headTubeLength: 205, seatTubeLength: 575 },
+      },
+    ],
+  },
+
+  // ── Rose Shave 2026 ───────────────────────────────────────────────────────
+  // Geometry from BikeInsights. Height ranges from rosebikes.nl product page.
+  {
+    id: 'rose-shave-2026',
+    brand: 'Rose',
+    model: 'Shave',
+    year: 2026,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/rose+shave+2026/',
+      tweedehands: 'https://www.2dehands.be/q/rose+shave+2026/',
+    },
+    sizes: [
+      {
+        size: 'XS',
+        manufacturerHeightRange: [155, 166],
+        geometry: { stack: 544, reach: 360, headTubeAngle: 71.0, seatTubeAngle: 75.0, chainstayLength: 412, wheelbase: 975, bbDrop: 73, standoverHeight: 748, headTubeLength: 123, seatTubeLength: 435 },
+      },
+      {
+        size: 'S',
+        manufacturerHeightRange: [163, 173],
+        geometry: { stack: 562, reach: 370, headTubeAngle: 72.0, seatTubeAngle: 74.5, chainstayLength: 412, wheelbase: 982, bbDrop: 73, standoverHeight: 774, headTubeLength: 138, seatTubeLength: 470 },
+      },
+      {
+        size: 'M',
+        manufacturerHeightRange: [171, 179],
+        geometry: { stack: 584, reach: 378, headTubeAngle: 73.0, seatTubeAngle: 74.0, chainstayLength: 414, wheelbase: 989, bbDrop: 73, standoverHeight: 796, headTubeLength: 157, seatTubeLength: 492 },
+      },
+      {
+        size: 'M/L',
+        manufacturerHeightRange: [177, 184],
+        geometry: { stack: 602, reach: 388, headTubeAngle: 73.25, seatTubeAngle: 73.5, chainstayLength: 414, wheelbase: 1002, bbDrop: 73, standoverHeight: 815, headTubeLength: 175, seatTubeLength: 512 },
+      },
+      {
+        size: 'L',
+        manufacturerHeightRange: [181, 191],
+        geometry: { stack: 622, reach: 398, headTubeAngle: 73.25, seatTubeAngle: 73.5, chainstayLength: 416, wheelbase: 1020, bbDrop: 73, standoverHeight: 837, headTubeLength: 196, seatTubeLength: 537 },
+      },
+      {
+        size: 'XL',
+        manufacturerHeightRange: [189, 200],
+        geometry: { stack: 648, reach: 410, headTubeAngle: 73.25, seatTubeAngle: 73.5, chainstayLength: 416, wheelbase: 1039, bbDrop: 73, standoverHeight: 867, headTubeLength: 223, seatTubeLength: 575 },
+      },
+    ],
+  },
 ];
 
 export function getBikeById(id: string): BikeModel | undefined {

@@ -88,7 +88,7 @@ src/
 - Tailwind `dark:` classes throughout all components
 - No manual toggle (by design — keeps it simple)
 
-## Current bike catalog (23 bikes)
+## Current bike catalog (25 bikes)
 
 | Brand | Model | Year | Sizes |
 |---|---|---|---|
@@ -115,6 +115,8 @@ src/
 | Bianchi | Oltre RC | 2025 | 47–59 (6) |
 | Cube | Agree C:62 SLT | 2025 | 50–62 (6) |
 | Cube | Agree C:62 SLT | 2026 | 53–62 (4) |
+| Rose | Shave FF | 2026 | XS–XL (6) |
+| Rose | Shave | 2026 | XS–XL (6) |
 
 ## Adding a new bike
 
