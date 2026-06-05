@@ -1236,6 +1236,55 @@ export const bikes: BikeModel[] = [
       },
     ],
   },
+
+  // ── Canyon Aeroad CFR AXS 2026 ───────────────────────────────────────────
+  {
+    id: 'canyon-aeroad-cfr-2026',
+    brand: 'Canyon',
+    model: 'Aeroad CFR',
+    year: 2026,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/canyon+aeroad+cfr+2026/',
+      tweedehands: 'https://www.2dehands.be/q/canyon+aeroad+cfr+2026/',
+    },
+    sizes: [
+      {
+        size: '2XS',
+        manufacturerHeightRange: [155, 163],
+        geometry: { stack: 498, reach: 372, headTubeAngle: 70.0, seatTubeAngle: 73.5, chainstayLength: 410, wheelbase: 975, bbDrop: 70, standoverHeight: 720, headTubeLength: 88, seatTubeLength: 441 },
+      },
+      {
+        size: 'XS',
+        manufacturerHeightRange: [163, 170],
+        geometry: { stack: 520, reach: 378, headTubeAngle: 71.2, seatTubeAngle: 73.5, chainstayLength: 410, wheelbase: 979, bbDrop: 70, standoverHeight: 748, headTubeLength: 107, seatTubeLength: 471 },
+      },
+      {
+        size: 'S',
+        manufacturerHeightRange: [168, 175],
+        geometry: { stack: 539, reach: 390, headTubeAngle: 72.8, seatTubeAngle: 73.5, chainstayLength: 410, wheelbase: 982, bbDrop: 70, standoverHeight: 775, headTubeLength: 121, seatTubeLength: 501 },
+      },
+      {
+        size: 'M',
+        manufacturerHeightRange: [175, 181],
+        geometry: { stack: 560, reach: 393, headTubeAngle: 73.25, seatTubeAngle: 73.5, chainstayLength: 410, wheelbase: 988, bbDrop: 70, standoverHeight: 801, headTubeLength: 142, seatTubeLength: 531 },
+      },
+      {
+        size: 'L',
+        manufacturerHeightRange: [181, 188],
+        geometry: { stack: 580, reach: 401, headTubeAngle: 73.3, seatTubeAngle: 73.5, chainstayLength: 413, wheelbase: 1003, bbDrop: 70, standoverHeight: 828, headTubeLength: 162, seatTubeLength: 561 },
+      },
+      {
+        size: 'XL',
+        manufacturerHeightRange: [188, 195],
+        geometry: { stack: 606, reach: 419, headTubeAngle: 73.5, seatTubeAngle: 73.5, chainstayLength: 415, wheelbase: 1029, bbDrop: 70, standoverHeight: 851, headTubeLength: 188, seatTubeLength: 591 },
+      },
+      {
+        size: '2XL',
+        manufacturerHeightRange: [195, 203],
+        geometry: { stack: 624, reach: 429, headTubeAngle: 73.8, seatTubeAngle: 73.5, chainstayLength: 415, wheelbase: 1042, bbDrop: 70, standoverHeight: 874, headTubeLength: 206, seatTubeLength: 621 },
+      },
+    ],
+  },
 ];
 
 export function getBikeById(id: string): BikeModel | undefined {
