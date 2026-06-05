@@ -1334,6 +1334,67 @@ export const bikes: BikeModel[] = [
       },
     ],
   },
+
+  // ── Pinarello F9 2026 ─────────────────────────────────────────────────────
+  // Stack, reach, HTA, STA, chainstay, head tube, BB drop from official geometry chart.
+  // Wheelbase and standover estimated (not published); height ranges estimated.
+  {
+    id: 'pinarello-f9-2026',
+    brand: 'Pinarello',
+    model: 'F9',
+    year: 2026,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/pinarello+f9+2026/',
+      tweedehands: 'https://www.2dehands.be/q/pinarello+f9+2026/',
+    },
+    sizes: [
+      {
+        size: '43',
+        manufacturerHeightRange: [155, 163],
+        geometry: { stack: 502.5, reach: 351.3, headTubeAngle: 69.5, seatTubeAngle: 74.4, chainstayLength: 406, wheelbase: 970, bbDrop: 67, standoverHeight: 735, headTubeLength: 97, seatTubeLength: 430 },
+      },
+      {
+        size: '46.5',
+        manufacturerHeightRange: [162, 168],
+        geometry: { stack: 517.7, reach: 365.2, headTubeAngle: 70.5, seatTubeAngle: 74.4, chainstayLength: 406, wheelbase: 978, bbDrop: 72, standoverHeight: 750, headTubeLength: 104, seatTubeLength: 465 },
+      },
+      {
+        size: '50',
+        manufacturerHeightRange: [166, 172],
+        geometry: { stack: 525.5, reach: 372.1, headTubeAngle: 71.4, seatTubeAngle: 74.0, chainstayLength: 408, wheelbase: 986, bbDrop: 72, standoverHeight: 762, headTubeLength: 109, seatTubeLength: 500 },
+      },
+      {
+        size: '51.5',
+        manufacturerHeightRange: [170, 176],
+        geometry: { stack: 532.3, reach: 378.1, headTubeAngle: 72.0, seatTubeAngle: 73.7, chainstayLength: 408, wheelbase: 988, bbDrop: 72, standoverHeight: 772, headTubeLength: 114, seatTubeLength: 515 },
+      },
+      {
+        size: '53',
+        manufacturerHeightRange: [173, 179],
+        geometry: { stack: 542.6, reach: 385.6, headTubeAngle: 72.5, seatTubeAngle: 73.7, chainstayLength: 408, wheelbase: 990, bbDrop: 72, standoverHeight: 782, headTubeLength: 123, seatTubeLength: 530 },
+      },
+      {
+        size: '54.5',
+        manufacturerHeightRange: [177, 182],
+        geometry: { stack: 557.9, reach: 388.3, headTubeAngle: 72.8, seatTubeAngle: 73.4, chainstayLength: 410, wheelbase: 998, bbDrop: 72, standoverHeight: 794, headTubeLength: 138, seatTubeLength: 545 },
+      },
+      {
+        size: '56',
+        manufacturerHeightRange: [180, 186],
+        geometry: { stack: 570.3, reach: 390.8, headTubeAngle: 73.2, seatTubeAngle: 73.0, chainstayLength: 410, wheelbase: 1003, bbDrop: 72, standoverHeight: 807, headTubeLength: 149.5, seatTubeLength: 560 },
+      },
+      {
+        size: '57.5',
+        manufacturerHeightRange: [184, 190],
+        geometry: { stack: 599.3, reach: 395.4, headTubeAngle: 73.7, seatTubeAngle: 73.0, chainstayLength: 410, wheelbase: 1010, bbDrop: 72, standoverHeight: 820, headTubeLength: 178, seatTubeLength: 575 },
+      },
+      {
+        size: '59.5',
+        manufacturerHeightRange: [188, 198],
+        geometry: { stack: 633.5, reach: 400.3, headTubeAngle: 73.4, seatTubeAngle: 72.4, chainstayLength: 410, wheelbase: 1025, bbDrop: 67, standoverHeight: 840, headTubeLength: 220, seatTubeLength: 595 },
+      },
+    ],
+  },
 ];
 
 export function getBikeById(id: string): BikeModel | undefined {
