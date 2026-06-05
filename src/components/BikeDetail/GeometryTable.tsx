@@ -1,4 +1,4 @@
-import type { GeometryValues } from '../../data/types';
+import type { BikeModel, GeometryValues } from '../../data/types';
 import { GEOMETRY_LABELS, GEOMETRY_UNITS } from '../../data/types';
 
 interface FitTargets {
@@ -6,9 +6,12 @@ interface FitTargets {
   reach?: number;
 }
 
+type BikeSpecs = Pick<BikeModel, 'weightKg' | 'maxTireClearance' | 'newPrice' | 'usedPrice'>;
+
 interface Props {
   geometry: GeometryValues;
   fitTargets?: FitTargets;
+  specs?: BikeSpecs;
 }
 
 function deltaBadgeCls(absDelta: number) {
@@ -17,12 +20,42 @@ function deltaBadgeCls(absDelta: number) {
   return 'text-red-500 dark:text-red-400 bg-red-50 dark:bg-red-950/60';
 }
 
-export function GeometryTable({ geometry, fitTargets }: Props) {
+const SPEC_ROWS: { key: keyof BikeSpecs; label: string; format: (v: number) => string }[] = [
+  { key: 'weightKg',        label: 'Weight',            format: (v) => `${v} kg` },
+  { key: 'maxTireClearance',label: 'Max Tire Clearance', format: (v) => `${v} mm` },
+  { key: 'newPrice',        label: 'New Price',          format: (v) => `€${v.toLocaleString('nl-NL')}` },
+  { key: 'usedPrice',       label: 'Used Price',         format: (v) => `€${v.toLocaleString('nl-NL')}` },
+];
+
+export function GeometryTable({ geometry, fitTargets, specs }: Props) {
   const keys = Object.keys(GEOMETRY_LABELS) as (keyof GeometryValues)[];
+  const visibleSpecs = specs ? SPEC_ROWS.filter(r => specs[r.key] !== undefined) : [];
 
   return (
     <table className="w-full text-sm">
       <tbody>
+        {visibleSpecs.length > 0 && (
+          <>
+            <tr>
+              <td colSpan={2} className="pt-1 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
+                Specs
+              </td>
+            </tr>
+            {visibleSpecs.map(({ key, label, format }) => (
+              <tr key={key} className="border-b border-slate-100 dark:border-slate-800">
+                <td className="py-2 pr-4 text-slate-500 dark:text-slate-400">{label}</td>
+                <td className="py-2 text-right font-mono text-slate-900 dark:text-slate-100">
+                  {format(specs![key] as number)}
+                </td>
+              </tr>
+            ))}
+            <tr>
+              <td colSpan={2} className="pt-3 pb-1 text-xs font-semibold uppercase tracking-wide text-slate-400 dark:text-slate-500">
+                Geometry
+              </td>
+            </tr>
+          </>
+        )}
         {keys.map((key) => {
           const fitTarget = (key === 'stack' || key === 'reach') ? fitTargets?.[key] : undefined;
           const delta = fitTarget !== undefined ? geometry[key] - fitTarget : null;

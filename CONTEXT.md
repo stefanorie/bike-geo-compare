@@ -42,3 +42,9 @@ when present, otherwise Computed Targets.
 Ten standardised frame measurements per bike size: stack, reach, head tube angle, seat tube angle,
 chainstay length, wheelbase, BB drop, standover height, head tube length, seat tube length.
 Defined in `src/data/types.ts` as `GeometryValues`.
+
+## Bike Specs
+Optional frame-level attributes on a Bike Model (not per size): weight in kg, max tire clearance
+in mm (700c assumed), new price in EUR (entry-level build), used price in EUR (typical second-hand
+market value — rough estimate only; see priceSearchUrls for live listings). All four fields are
+optional and entered manually.

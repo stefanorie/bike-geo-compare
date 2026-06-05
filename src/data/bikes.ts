@@ -739,6 +739,8 @@ export const bikes: BikeModel[] = [
     brand: 'Pinarello',
     model: 'X1',
     year: 2025,
+    maxTireClearance: 35,
+    newPrice: 3499,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/pinarello+x1+2025/',
       tweedehands: 'https://www.2dehands.be/q/pinarello+x1+2025/',

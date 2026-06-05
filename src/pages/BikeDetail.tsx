@@ -83,7 +83,7 @@ export function BikeDetailPage() {
               </button>
             </div>
             <div className="px-5 py-4">
-              <GeometryTable geometry={sizeEntry.geometry} fitTargets={fitTargets} />
+              <GeometryTable geometry={sizeEntry.geometry} fitTargets={fitTargets} specs={bike} />
             </div>
           </div>
         ))}

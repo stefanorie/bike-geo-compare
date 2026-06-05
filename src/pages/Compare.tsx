@@ -127,6 +127,8 @@ export function ComparePage() {
               geometryA={sizeA.geometry}
               geometryB={sizeB.geometry}
               fitTargets={fitTargets}
+              specsA={bikeA}
+              specsB={bikeB}
             />
           </div>
         </div>

@@ -49,6 +49,10 @@ export interface BikeModel {
   model: string;
   year: number;
   sizes: SizeEntry[];
+  weightKg?: number;
+  maxTireClearance?: number;
+  newPrice?: number;
+  usedPrice?: number;
   priceSearchUrls: {
     fietsenzo?: string;
     marktplaats?: string;
