@@ -640,6 +640,8 @@ export const bikes: BikeModel[] = [
     brand: 'Canyon',
     model: 'Endurace CFR',
     year: 2026,
+    newPrice: 9000,
+    usedPrice: 6000,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/canyon+endurace+cfr+2026/',
       tweedehands: 'https://www.2dehands.be/q/canyon+endurace+cfr+2026/',
@@ -684,6 +686,8 @@ export const bikes: BikeModel[] = [
     brand: 'Trek',
     model: 'Émonda SLR',
     year: 2025,
+    newPrice: 8500,
+    usedPrice: 5000,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/trek+emonda+slr+2025/',
       tweedehands: 'https://www.2dehands.be/q/trek+emonda+slr+2025/',
@@ -740,7 +744,8 @@ export const bikes: BikeModel[] = [
     model: 'X1',
     year: 2025,
     maxTireClearance: 35,
-    newPrice: 3499,
+    newPrice: 3200,
+    usedPrice: 2600,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/pinarello+x1+2025/',
       tweedehands: 'https://www.2dehands.be/q/pinarello+x1+2025/',
@@ -800,6 +805,8 @@ export const bikes: BikeModel[] = [
     brand: 'Pinarello',
     model: 'X3',
     year: 2025,
+    newPrice: 4500,
+    usedPrice: 4000,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/pinarello+x3+2025/',
       tweedehands: 'https://www.2dehands.be/q/pinarello+x3+2025/',
@@ -823,6 +830,8 @@ export const bikes: BikeModel[] = [
     brand: 'Pinarello',
     model: 'X5',
     year: 2025,
+    newPrice: 5000,
+    usedPrice: 3400,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/pinarello+x5+2025/',
       tweedehands: 'https://www.2dehands.be/q/pinarello+x5+2025/',
@@ -981,6 +990,8 @@ export const bikes: BikeModel[] = [
     brand: 'Canyon',
     model: 'Endurace CF SLX',
     year: 2027,
+    newPrice: 4000,
+    usedPrice: 3800,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/canyon+endurace+cf+slx+2027/',
       tweedehands: 'https://www.2dehands.be/q/canyon+endurace+cf+slx+2027/',
@@ -1028,6 +1039,8 @@ export const bikes: BikeModel[] = [
     brand: 'Trek',
     model: 'Madone SLR',
     year: 2026,
+    newPrice: 8000,
+    usedPrice: 5800,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/trek+madone+slr+2026/',
       tweedehands: 'https://www.2dehands.be/q/trek+madone+slr+2026/',
@@ -1117,6 +1130,8 @@ export const bikes: BikeModel[] = [
     brand: 'Trek',
     model: 'Domane SLR',
     year: 2026,
+    newPrice: 7500,
+    usedPrice: 4500,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/trek+domane+slr+2026/',
       tweedehands: 'https://www.2dehands.be/q/trek+domane+slr+2026/',
@@ -1169,6 +1184,8 @@ export const bikes: BikeModel[] = [
     brand: 'Cube',
     model: 'Agree C:62 SLT',
     year: 2025,
+    newPrice: 5000,
+    usedPrice: 3500,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/cube+agree+c62+slt+2025/',
       tweedehands: 'https://www.2dehands.be/q/cube+agree+c62+slt+2025/',
@@ -1211,6 +1228,8 @@ export const bikes: BikeModel[] = [
     brand: 'Cube',
     model: 'Agree C:62 SLT',
     year: 2026,
+    newPrice: 5000,
+    usedPrice: 3500,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/cube+agree+c62+slt+2026/',
       tweedehands: 'https://www.2dehands.be/q/cube+agree+c62+slt+2026/',
@@ -1245,6 +1264,8 @@ export const bikes: BikeModel[] = [
     brand: 'Canyon',
     model: 'Aeroad CFR',
     year: 2026,
+    newPrice: 8500,
+    usedPrice: 6500,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/canyon+aeroad+cfr+2026/',
       tweedehands: 'https://www.2dehands.be/q/canyon+aeroad+cfr+2026/',
@@ -1294,6 +1315,8 @@ export const bikes: BikeModel[] = [
     brand: 'Canyon',
     model: 'Endurace CF SLX',
     year: 2026,
+    newPrice: 4000,
+    usedPrice: 3800,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/canyon+endurace+cf+slx+2026/',
       tweedehands: 'https://www.2dehands.be/q/canyon+endurace+cf+slx+2026/',
@@ -1345,6 +1368,8 @@ export const bikes: BikeModel[] = [
     brand: 'Pinarello',
     model: 'F9',
     year: 2026,
+    newPrice: 11000,
+    usedPrice: 7200,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/pinarello+f9+2026/',
       tweedehands: 'https://www.2dehands.be/q/pinarello+f9+2026/',
@@ -1405,6 +1430,7 @@ export const bikes: BikeModel[] = [
     brand: 'Rose',
     model: 'Shave FF',
     year: 2026,
+    newPrice: 5700,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/rose+shave+ff+2026/',
       tweedehands: 'https://www.2dehands.be/q/rose+shave+ff+2026/',
@@ -1450,6 +1476,7 @@ export const bikes: BikeModel[] = [
     brand: 'Rose',
     model: 'Shave',
     year: 2026,
+    newPrice: 3700,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/rose+shave+2026/',
       tweedehands: 'https://www.2dehands.be/q/rose+shave+2026/',
