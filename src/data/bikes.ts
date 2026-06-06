@@ -1514,6 +1514,52 @@ export const bikes: BikeModel[] = [
       },
     ],
   },
+
+  // ── Lightcarbon LCR018-D (Frameset) 2026 ─────────────────────────────────
+  // Geometry from Lightcarbon product page. Frameset only — no groupset included.
+  {
+    id: 'lightcarbon-lcr018-d-2026',
+    brand: 'Lightcarbon',
+    model: 'LCR018-D (Frameset)',
+    year: 2026,
+    newPrice: 700,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/lightcarbon+lcr018/',
+      tweedehands: 'https://www.2dehands.be/q/lightcarbon+lcr018/',
+    },
+    sizes: [
+      {
+        size: '470',
+        manufacturerHeightRange: [156, 165],
+        geometry: { stack: 519.6, reach: 365, headTubeAngle: 70.9, seatTubeAngle: 75, chainstayLength: 415, wheelbase: 983.3, bbDrop: 78, standoverHeight: 713.5, headTubeLength: 107, seatTubeLength: 440 },
+      },
+      {
+        size: '500',
+        manufacturerHeightRange: [166, 172],
+        geometry: { stack: 538.1, reach: 371, headTubeAngle: 71.3, seatTubeAngle: 74.5, chainstayLength: 415, wheelbase: 992, bbDrop: 78, standoverHeight: 740.5, headTubeLength: 125, seatTubeLength: 460 },
+      },
+      {
+        size: '520',
+        manufacturerHeightRange: [173, 179],
+        geometry: { stack: 552, reach: 377, headTubeAngle: 72, seatTubeAngle: 74, chainstayLength: 415, wheelbase: 992.2, bbDrop: 78, standoverHeight: 758.6, headTubeLength: 137, seatTubeLength: 480 },
+      },
+      {
+        size: '540',
+        manufacturerHeightRange: [180, 186],
+        geometry: { stack: 569, reach: 383, headTubeAngle: 72, seatTubeAngle: 73.7, chainstayLength: 415, wheelbase: 1004.8, bbDrop: 76, standoverHeight: 779.4, headTubeLength: 157, seatTubeLength: 500 },
+      },
+      {
+        size: '560',
+        manufacturerHeightRange: [187, 193],
+        geometry: { stack: 586.8, reach: 389, headTubeAngle: 72.6, seatTubeAngle: 73.5, chainstayLength: 415, wheelbase: 1006.3, bbDrop: 76, standoverHeight: 797, headTubeLength: 172, seatTubeLength: 518 },
+      },
+      {
+        size: '580',
+        manufacturerHeightRange: [194, 199],
+        geometry: { stack: 605.8, reach: 396, headTubeAngle: 72.6, seatTubeAngle: 73.2, chainstayLength: 415, wheelbase: 1020.3, bbDrop: 74, standoverHeight: 812.5, headTubeLength: 194, seatTubeLength: 530 },
+      },
+    ],
+  },
 ];
 
 export function getBikeById(id: string): BikeModel | undefined {
