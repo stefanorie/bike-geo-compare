@@ -88,35 +88,38 @@ src/
 - Tailwind `dark:` classes throughout all components
 - No manual toggle (by design — keeps it simple)
 
-## Current bike catalog (25 bikes)
+## Current bike catalog (28 bikes)
 
-| Brand | Model | Year | Sizes |
-|---|---|---|---|
-| Trek | Madone SLR | 2024 | 44–62 (8) |
-| Trek | Madone SLR | 2026 | XS–XL (6) |
-| Trek | Émonda SLR | 2025 | 47–62 (8) |
-| Trek | Domane SLR | 2026 | 47–62 (8) |
-| Specialized | Tarmac SL8 | 2024 | 44–61 (7) |
-| Specialized | Aethos | 2026 | 49–61 (6) |
-| Canyon | Ultimate CFR | 2024 | XS–XL (5) |
-| Canyon | Aeroad CFR | 2026 | 2XS–2XL (7) |
-| Canyon | Endurace CFR | 2026 | 2XS–XL (6) |
-| Canyon | Endurace CF SLX | 2026 | 2XS–2XL (7) |
-| Canyon | Endurace CF SLX | 2027 | 2XS–2XL (7) |
-| Giant | TCR Advanced SL | 2024 | XS–XL (6) |
-| Cervélo | R5 | 2024 | 44–61 (7) |
-| Orbea | Orca | 2026 | 47–60 (7) |
-| Pinarello | X1 | 2025 | 43–60 (9) |
-| Pinarello | X3 | 2025 | 43–60 (9) |
-| Pinarello | X5 | 2025 | 43–60 (9) |
-| Pinarello | F9 | 2026 | 43–59.5 (9) |
-| BMC | Teammachine SLR | 2025 | 47–61 (6) |
-| Colnago | V4Rs | 2025 | 42–57 (7) |
-| Bianchi | Oltre RC | 2025 | 47–59 (6) |
-| Cube | Agree C:62 SLT | 2025 | 50–62 (6) |
-| Cube | Agree C:62 SLT | 2026 | 53–62 (4) |
-| Rose | Shave FF | 2026 | XS–XL (6) |
-| Rose | Shave | 2026 | XS–XL (6) |
+| Brand | Model | Year | Sizes | Notes |
+|---|---|---|---|---|
+| Trek | Madone SLR | 2024 | 44–62 (8) | |
+| Trek | Madone SLR | 2026 | XS–XL (6) | |
+| Trek | Émonda SLR | 2025 | 47–62 (8) | |
+| Trek | Domane SLR | 2026 | 47–62 (8) | |
+| Specialized | Tarmac SL8 | 2024 | 44–61 (7) | |
+| Specialized | Aethos | 2026 | 49–61 (6) | |
+| Canyon | Ultimate CFR | 2024 | XS–XL (5) | |
+| Canyon | Aeroad CFR | 2026 | 2XS–2XL (7) | |
+| Canyon | Endurace CFR | 2026 | 2XS–XL (6) | |
+| Canyon | Endurace CF SLX | 2026 | 2XS–2XL (7) | |
+| Canyon | Endurace CF SLX | 2027 | 2XS–2XL (7) | |
+| Giant | TCR Advanced SL | 2024 | XS–XL (6) | |
+| Cervélo | R5 | 2024 | 44–61 (7) | |
+| Orbea | Orca | 2026 | 47–60 (7) | |
+| Pinarello | X1 | 2025 | 43–60 (9) | |
+| Pinarello | X3 | 2025 | 43–60 (9) | |
+| Pinarello | X5 | 2025 | 43–60 (9) | |
+| Pinarello | F9 | 2026 | 43–59.5 (9) | |
+| BMC | Teammachine SLR | 2025 | 47–61 (6) | |
+| Colnago | V4Rs | 2025 | 42–57 (7) | |
+| Bianchi | Oltre RC | 2025 | 47–59 (6) | |
+| Cube | Agree C:62 SLT | 2025 | 50–62 (6) | |
+| Cube | Agree C:62 SLT | 2026 | 53–62 (4) | |
+| Rose | Shave FF | 2026 | XS–XL (6) | |
+| Rose | Shave | 2026 | XS–XL (6) | |
+| Lightcarbon | LCR018-D (Frameset) | 2026 | 470–580 (6) | Frameset only |
+| Yoeleo | R12 (Frameset) | 2026 | 43–59 (7) | Frameset only, standover estimated |
+| Evolve | CIMA (Frameset) | 2026 | XS–XL (6) | Frameset only |
 
 ## Adding a new bike
 

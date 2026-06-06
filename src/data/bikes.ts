@@ -1561,6 +1561,52 @@ export const bikes: BikeModel[] = [
     ],
   },
 
+  // ── Evolve CIMA (Frameset) 2026 ───────────────────────────────────────────
+  // Geometry from Evolve product page. Frameset only — no groupset included.
+  {
+    id: 'evolve-cima-2026',
+    brand: 'Evolve',
+    model: 'CIMA (Frameset)',
+    year: 2026,
+    newPrice: 2200,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/evolve+cima/',
+      tweedehands: 'https://www.2dehands.be/q/evolve+cima/',
+    },
+    sizes: [
+      {
+        size: 'XS',
+        manufacturerHeightRange: [150, 163],
+        geometry: { stack: 506, reach: 371, headTubeAngle: 71.1, seatTubeAngle: 75, chainstayLength: 410, wheelbase: 969, bbDrop: 74, standoverHeight: 727, headTubeLength: 103, seatTubeLength: 443 },
+      },
+      {
+        size: 'S',
+        manufacturerHeightRange: [161, 170],
+        geometry: { stack: 528, reach: 378, headTubeAngle: 72.2, seatTubeAngle: 75, chainstayLength: 410, wheelbase: 973, bbDrop: 74, standoverHeight: 749, headTubeLength: 122, seatTubeLength: 465 },
+      },
+      {
+        size: 'M',
+        manufacturerHeightRange: [168, 177],
+        geometry: { stack: 544, reach: 384, headTubeAngle: 73, seatTubeAngle: 74, chainstayLength: 410, wheelbase: 978, bbDrop: 72, standoverHeight: 767, headTubeLength: 138, seatTubeLength: 481 },
+      },
+      {
+        size: 'ML',
+        manufacturerHeightRange: [175, 184],
+        geometry: { stack: 562, reach: 390, headTubeAngle: 73.8, seatTubeAngle: 74, chainstayLength: 410, wheelbase: 978, bbDrop: 72, standoverHeight: 785, headTubeLength: 153, seatTubeLength: 499 },
+      },
+      {
+        size: 'L',
+        manufacturerHeightRange: [182, 192],
+        geometry: { stack: 580, reach: 397, headTubeAngle: 73.8, seatTubeAngle: 73.5, chainstayLength: 410, wheelbase: 991, bbDrop: 70, standoverHeight: 805, headTubeLength: 173, seatTubeLength: 517 },
+      },
+      {
+        size: 'XL',
+        manufacturerHeightRange: [190, 200],
+        geometry: { stack: 608, reach: 406, headTubeAngle: 73.8, seatTubeAngle: 73.5, chainstayLength: 410, wheelbase: 1008, bbDrop: 70, standoverHeight: 829, headTubeLength: 203, seatTubeLength: 540 },
+      },
+    ],
+  },
+
   // ── Yoeleo R12 (Frameset) 2026 ────────────────────────────────────────────
   // Geometry from Yoeleo product page. Frameset only — no groupset included.
   // Standover height estimated (not published by manufacturer).
