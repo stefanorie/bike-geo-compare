@@ -1560,6 +1560,58 @@ export const bikes: BikeModel[] = [
       },
     ],
   },
+
+  // ── Yoeleo R12 (Frameset) 2026 ────────────────────────────────────────────
+  // Geometry from Yoeleo product page. Frameset only — no groupset included.
+  // Standover height estimated (not published by manufacturer).
+  {
+    id: 'yoeleo-r12-2026',
+    brand: 'Yoeleo',
+    model: 'R12 (Frameset)',
+    year: 2026,
+    newPrice: 1640,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/yoeleo+r12/',
+      tweedehands: 'https://www.2dehands.be/q/yoeleo+r12/',
+    },
+    sizes: [
+      {
+        size: '43',
+        manufacturerHeightRange: [155, 163],
+        geometry: { stack: 501.6, reach: 370.6, headTubeAngle: 70.5, seatTubeAngle: 75, chainstayLength: 415, wheelbase: 977, bbDrop: 72, standoverHeight: 710, headTubeLength: 100, seatTubeLength: 430 },
+      },
+      {
+        size: '47',
+        manufacturerHeightRange: [160, 168],
+        geometry: { stack: 505, reach: 375.9, headTubeAngle: 71.5, seatTubeAngle: 74.5, chainstayLength: 415, wheelbase: 974.8, bbDrop: 72, standoverHeight: 730, headTubeLength: 100, seatTubeLength: 450 },
+      },
+      {
+        size: '50',
+        manufacturerHeightRange: [165, 173],
+        geometry: { stack: 520.9, reach: 378.6, headTubeAngle: 72, seatTubeAngle: 74, chainstayLength: 415, wheelbase: 978.3, bbDrop: 72, standoverHeight: 755, headTubeLength: 115, seatTubeLength: 470 },
+      },
+      {
+        size: '52',
+        manufacturerHeightRange: [170, 178],
+        geometry: { stack: 536.9, reach: 381, headTubeAngle: 72.5, seatTubeAngle: 73.5, chainstayLength: 415, wheelbase: 981.3, bbDrop: 72, standoverHeight: 770, headTubeLength: 130, seatTubeLength: 490 },
+      },
+      {
+        size: '54',
+        manufacturerHeightRange: [175, 183],
+        geometry: { stack: 550, reach: 386, headTubeAngle: 73, seatTubeAngle: 73, chainstayLength: 415, wheelbase: 987.6, bbDrop: 72, standoverHeight: 785, headTubeLength: 145.7, seatTubeLength: 510 },
+      },
+      {
+        size: '56',
+        manufacturerHeightRange: [180, 188],
+        geometry: { stack: 567.2, reach: 388.2, headTubeAngle: 73, seatTubeAngle: 72.5, chainstayLength: 415, wheelbase: 993.2, bbDrop: 72, standoverHeight: 805, headTubeLength: 160, seatTubeLength: 530 },
+      },
+      {
+        size: '59',
+        manufacturerHeightRange: [185, 193],
+        geometry: { stack: 581.6, reach: 393, headTubeAngle: 73, seatTubeAngle: 72, chainstayLength: 415, wheelbase: 1002.4, bbDrop: 72, standoverHeight: 825, headTubeLength: 175, seatTubeLength: 560 },
+      },
+    ],
+  },
 ];
 
 export function getBikeById(id: string): BikeModel | undefined {
