@@ -38,7 +38,7 @@ function SectionHeader({ children }: { children: React.ReactNode }) {
 
 export function Home() {
   const navigate = useNavigate();
-  const { isFavorite, toggleFavorite } = useFavorites();
+  const { isFavoriteAny } = useFavorites();
   const [compareA, setCompareA] = useState<{ bike: BikeModel; size: SizeEntry } | null>(null);
 
   const handleSelectA = (bike: BikeModel, size: SizeEntry) => setCompareA({ bike, size });
@@ -127,17 +127,9 @@ export function Home() {
                 </span>
               </div>
               <div className="flex items-center gap-3 ml-3 shrink-0">
-                <button
-                  onClick={(e) => { e.stopPropagation(); toggleFavorite(bike.id); }}
-                  className={`text-lg leading-none transition-colors ${
-                    isFavorite(bike.id)
-                      ? 'text-amber-400'
-                      : 'text-slate-300 dark:text-slate-700 hover:text-amber-400'
-                  }`}
-                  aria-label={isFavorite(bike.id) ? 'Remove from favorites' : 'Add to favorites'}
-                >
-                  {isFavorite(bike.id) ? '★' : '☆'}
-                </button>
+                {isFavoriteAny(bike.id) && (
+                  <span className="text-lg leading-none text-amber-400" aria-label="Has favorited sizes">★</span>
+                )}
                 <span className="text-slate-300 dark:text-slate-700 group-hover:text-slate-400 transition-colors text-sm">
                   →
                 </span>

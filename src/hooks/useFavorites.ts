@@ -30,7 +30,12 @@ export function useFavorites() {
     );
   };
 
+  // id = exact `bikeId__size` key
   const isFavorite = (id: string) => favorites.includes(id);
 
-  return { favorites, addFavorite, removeFavorite, toggleFavorite, isFavorite };
+  // bikeId only — true if any size of that bike is favorited
+  const isFavoriteAny = (bikeId: string) =>
+    favorites.some((f) => f.startsWith(bikeId + '__'));
+
+  return { favorites, addFavorite, removeFavorite, toggleFavorite, isFavorite, isFavoriteAny };
 }
