@@ -92,7 +92,7 @@ src/
 - Tailwind `dark:` classes throughout all components
 - No manual toggle (by design — keeps it simple)
 
-## Current bike catalog (28 bikes)
+## Current bike catalog (29 bikes)
 
 | Brand | Model | Year | Sizes | Notes |
 |---|---|---|---|---|
@@ -110,6 +110,7 @@ src/
 | Giant | TCR Advanced SL | 2024 | XS–XL (6) | |
 | Cervélo | R5 | 2024 | 44–61 (7) | |
 | Orbea | Orca | 2026 | 47–60 (7) | |
+| Pinarello | Dogma X | 2026 | 43–62 (11) | Standover estimated |
 | Pinarello | X1 | 2025 | 43–60 (9) | |
 | Pinarello | X3 | 2025 | 43–60 (9) | |
 | Pinarello | X5 | 2025 | 43–60 (9) | |
