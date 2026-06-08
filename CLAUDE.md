@@ -1,5 +1,9 @@
 # Bike Geo Compare — Project Context
 
+## Communication style
+
+Always use the `/caveman` skill. Saves tokens — terse responses, no filler, full technical accuracy.
+
 Road bike geometry comparison web app. Fully static (no backend, no database). All bike data is hardcoded TypeScript. Claude helps populate geometry data at dev time by searching manufacturer websites and geometry databases.
 
 ## Tech stack
