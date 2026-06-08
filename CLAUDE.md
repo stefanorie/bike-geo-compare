@@ -46,14 +46,16 @@ src/
 | `/` | `Home.tsx` | Hero banner, quick-compare widget (two selectors → navigate to `/compare`), sizing suggestion widget, full bike catalog with favorite toggles |
 | `/bike/:id` | `BikeDetail.tsx` | All sizes for one bike with geometry table, manufacturer height ranges, Fit Delta badges if profile set, price search links (Marktplaats / 2dehands / Fietsenzo), favorite toggle |
 | `/compare` | `Compare.tsx` | Side-by-side comparison of two bikes (`?a=bikeId__size&b=bikeId__size`). Silhouette Overlay SVG + CompareTable with delta column and Fit Delta badges. Share button copies URL to clipboard. |
-| `/favorites` | `Favorites.tsx` | List of saved Bike Models from localStorage. One-click removal, links to detail pages. |
+| `/favorites` | `Favorites.tsx` | List of saved bike+size combinations from localStorage. Shows size badge, Compare button pre-fills compare URL, one-click removal. |
 | `/profile` | `MyFit.tsx` | Rider Profile editor (body measurements + Fitter Stack/Reach). Displays Computed Targets alongside fitter values for sanity-checking. Planned: "Bikes matching your fit" section. |
 
 ## Design decisions
 
 ### Data
 - Bike data lives in `src/data/bikes.ts` as a plain TypeScript array
+- `sortedBikes` export (sorted brand asc → model asc → year asc) used for all UI listings
 - 10 core geometry fields per size: stack, reach, headTubeAngle, seatTubeAngle, chainstayLength, wheelbase, bbDrop, standoverHeight, headTubeLength, seatTubeLength (c-t)
+- 4 optional bike-level spec fields: `weightKg`, `maxTireClearance` (mm, 700c), `newPrice` (EUR, entry build), `usedPrice` (EUR, typical market). All entered manually.
 - Standover heights and some secondary fields are estimated where manufacturers don't publish them — this is fine for comparison purposes
 - Pinarello X1/X3/X5 share identical frame geometry (differ only in groupset/carbon grade) — this is accurate
 - Geometry data sourced from: BikeInsights, Canyon official, Trek official, Specialized official. Avoid GeometryGeeks — it returns corrupted data for many bikes (impossible head tube angles like 61° or 81°)
@@ -79,7 +81,9 @@ src/
 - Source badges: "Mfg + Calc" (both match), "Mfg chart", "Calculated"
 
 ### Favorites
-- Stored as `string[]` of bike IDs in `localStorage` key `bike-geo-favorites`
+- Stored as `string[]` of `bikeId__size` keys in `localStorage` key `bike-geo-favorites`
+- Per size, not per bike — star button lives on each size row in BikeDetail
+- Home page shows a read-only star indicator if any size of that bike is favorited
 - No sync across devices — by design
 
 ### Price lookup
@@ -132,7 +136,9 @@ src/
 2. Add a `BikeModel` entry to the `bikes` array in `src/data/bikes.ts`
 3. ID format: `{brand}-{model}-{year}` all lowercase, spaces → hyphens, accents stripped
 4. Add Marktplaats/2dehands search URLs in `priceSearchUrls`
-5. Run `npm run build` to verify no TypeScript errors
+5. Add optional spec fields where known: `weightKg`, `maxTireClearance` (mm, 700c), `newPrice`, `usedPrice` (EUR)
+6. Add entry to the catalog table in this file
+7. Run `npm run build` to verify no TypeScript errors
 
 ## Running locally
 
@@ -169,5 +175,4 @@ Wrapper script (needed for path-with-spaces): `C:\dev-launchers\bike-geo.cmd`
 ### Nice to have
 - [ ] Add a third bike to comparison (bike C in a third color)
 - [ ] Export comparison as PNG/PDF
-- [ ] Fietsenzo search URL support (currently only Marktplaats + 2dehands)
-- [ ] Add CONTEXT.md glossary for domain terms (stack, reach, BB drop, etc.)
+- [ ] Fietsenzo search URLs — most bikes only have Marktplaats + 2dehands
