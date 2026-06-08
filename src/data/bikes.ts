@@ -1561,6 +1561,78 @@ export const bikes: BikeModel[] = [
     ],
   },
 
+  // ── Pinarello Dogma X 2026 ────────────────────────────────────────────────
+  // Geometry from Pinarello official site. Sizes = CC (seat tube c-c in cm).
+  // seatTubeLength = CE (c-end). Standover height estimated.
+  {
+    id: 'pinarello-dogma-x-2026',
+    brand: 'Pinarello',
+    model: 'Dogma X (Frameset)',
+    year: 2026,
+    newPrice: 6700,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/pinarello+dogma+x+2026/',
+      tweedehands: 'https://www.2dehands.be/q/pinarello+dogma+x+2026/',
+    },
+    sizes: [
+      {
+        size: '43',
+        manufacturerHeightRange: [155, 163],
+        geometry: { stack: 524.2, reach: 349.3, headTubeAngle: 70, seatTubeAngle: 74.4, chainstayLength: 422, wheelbase: 966.8, bbDrop: 77, standoverHeight: 710, headTubeLength: 107, seatTubeLength: 425 },
+      },
+      {
+        size: '46.5',
+        manufacturerHeightRange: [161, 168],
+        geometry: { stack: 535.5, reach: 358.1, headTubeAngle: 70, seatTubeAngle: 74.4, chainstayLength: 422, wheelbase: 979.7, bbDrop: 77, standoverHeight: 725, headTubeLength: 119, seatTubeLength: 450 },
+      },
+      {
+        size: '50',
+        manufacturerHeightRange: [166, 173],
+        geometry: { stack: 542.1, reach: 365.4, headTubeAngle: 70.5, seatTubeAngle: 74, chainstayLength: 422, wheelbase: 986.8, bbDrop: 77, standoverHeight: 735, headTubeLength: 124, seatTubeLength: 465 },
+      },
+      {
+        size: '51.5',
+        manufacturerHeightRange: [170, 176],
+        geometry: { stack: 548.6, reach: 371.7, headTubeAngle: 71, seatTubeAngle: 73.7, chainstayLength: 422, wheelbase: 990.6, bbDrop: 77, standoverHeight: 745, headTubeLength: 129, seatTubeLength: 485 },
+      },
+      {
+        size: '53',
+        manufacturerHeightRange: [173, 179],
+        geometry: { stack: 559, reach: 379.4, headTubeAngle: 71.5, seatTubeAngle: 73.7, chainstayLength: 422, wheelbase: 997, bbDrop: 77, standoverHeight: 755, headTubeLength: 138, seatTubeLength: 500 },
+      },
+      {
+        size: '54',
+        manufacturerHeightRange: [176, 182],
+        geometry: { stack: 568.4, reach: 381.2, headTubeAngle: 72, seatTubeAngle: 73.4, chainstayLength: 422, wheelbase: 999.1, bbDrop: 77, standoverHeight: 765, headTubeLength: 146, seatTubeLength: 510 },
+      },
+      {
+        size: '55',
+        manufacturerHeightRange: [179, 185],
+        geometry: { stack: 578.9, reach: 383, headTubeAngle: 72, seatTubeAngle: 73.4, chainstayLength: 422, wheelbase: 1004.3, bbDrop: 77, standoverHeight: 778, headTubeLength: 157, seatTubeLength: 520 },
+      },
+      {
+        size: '56',
+        manufacturerHeightRange: [182, 187],
+        geometry: { stack: 588.4, reach: 384.6, headTubeAngle: 72.5, seatTubeAngle: 73, chainstayLength: 422, wheelbase: 1003.9, bbDrop: 77, standoverHeight: 790, headTubeLength: 165, seatTubeLength: 525 },
+      },
+      {
+        size: '57.5',
+        manufacturerHeightRange: [185, 191],
+        geometry: { stack: 601.7, reach: 390.8, headTubeAngle: 72.8, seatTubeAngle: 73, chainstayLength: 422, wheelbase: 1011.7, bbDrop: 77, standoverHeight: 805, headTubeLength: 178, seatTubeLength: 540 },
+      },
+      {
+        size: '59.5',
+        manufacturerHeightRange: [188, 194],
+        geometry: { stack: 632, reach: 395.3, headTubeAngle: 73, seatTubeAngle: 72.4, chainstayLength: 422, wheelbase: 1025.3, bbDrop: 72, standoverHeight: 840, headTubeLength: 214, seatTubeLength: 560 },
+      },
+      {
+        size: '62',
+        manufacturerHeightRange: [192, 200],
+        geometry: { stack: 670.3, reach: 403.8, headTubeAngle: 73, seatTubeAngle: 72, chainstayLength: 422, wheelbase: 1047.6, bbDrop: 72, standoverHeight: 880, headTubeLength: 254, seatTubeLength: 600 },
+      },
+    ],
+  },
+
   // ── Evolve CIMA (Frameset) 2026 ───────────────────────────────────────────
   // Geometry from Evolve product page. Frameset only — no groupset included.
   {
@@ -1659,6 +1731,10 @@ export const bikes: BikeModel[] = [
     ],
   },
 ];
+
+export const sortedBikes: BikeModel[] = [...bikes].sort((a, b) =>
+  a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model) || a.year - b.year
+);
 
 export function getBikeById(id: string): BikeModel | undefined {
   return bikes.find((b) => b.id === id);

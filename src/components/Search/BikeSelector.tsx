@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import {
-  bikes,
+  sortedBikes as bikes,
   getBrands,
   getModelsByBrand,
   getYearsByBrandModel,

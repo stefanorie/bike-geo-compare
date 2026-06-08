@@ -46,7 +46,7 @@ function Nav() {
 
   return (
     <header className="sticky top-0 z-20 bg-white/90 dark:bg-slate-950/90 backdrop-blur border-b border-slate-200 dark:border-slate-800">
-      <div className="max-w-4xl mx-auto px-4 flex items-center gap-6 h-14">
+      <div className="max-w-4xl mx-auto px-3 sm:px-4 flex items-center gap-3 sm:gap-6 h-14">
         <Link
           to="/"
           className="flex items-center gap-2 text-slate-900 dark:text-slate-100 font-semibold text-sm shrink-0"
@@ -54,10 +54,10 @@ function Nav() {
           <span className="text-blue-600 dark:text-blue-400">
             <WheelIcon />
           </span>
-          BikeGeo
+          <span className="hidden sm:inline">BikeGeo</span>
         </Link>
 
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-2 sm:gap-5">
           {navLink('/', 'Home')}
           {navLink('/compare', 'Compare')}
           {navLink('/favorites', 'Favorites')}

@@ -8,6 +8,7 @@ export function BikeDetailPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { isFavorite, toggleFavorite } = useFavorites();
+  const favKey = (size: string) => `${bike?.id}__${size}`;
   const { profile } = useRiderProfile();
   const bike = id ? getBikeById(id) : undefined;
   const fitTargets =
@@ -37,25 +38,14 @@ export function BikeDetailPage() {
         >
           ← Back
         </button>
-        <div className="flex items-start justify-between gap-4">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">
-              {bike.brand}
-            </p>
-            <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-              {bike.model}
-            </h1>
-            <p className="text-slate-500 dark:text-slate-400 mt-1">{bike.year}</p>
-          </div>
-          <button
-            onClick={() => toggleFavorite(bike.id)}
-            className={`text-2xl mt-2 transition-colors ${
-              isFavorite(bike.id) ? 'text-amber-400' : 'text-slate-300 dark:text-slate-700 hover:text-amber-400'
-            }`}
-            aria-label={isFavorite(bike.id) ? 'Remove from favorites' : 'Add to favorites'}
-          >
-            {isFavorite(bike.id) ? '★' : '☆'}
-          </button>
+        <div>
+          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">
+            {bike.brand}
+          </p>
+          <h1 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+            {bike.model}
+          </h1>
+          <p className="text-slate-500 dark:text-slate-400 mt-1">{bike.year}</p>
         </div>
       </div>
 
@@ -75,12 +65,25 @@ export function BikeDetailPage() {
                   {sizeEntry.manufacturerHeightRange[0]}–{sizeEntry.manufacturerHeightRange[1]} cm
                 </span>
               </div>
-              <button
-                onClick={() => navigate(`/compare?a=${bike.id}__${sizeEntry.size}`)}
-                className="text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline"
-              >
-                Compare →
-              </button>
+              <div className="flex items-center gap-3">
+                <button
+                  onClick={() => toggleFavorite(favKey(sizeEntry.size))}
+                  className={`text-lg leading-none transition-colors ${
+                    isFavorite(favKey(sizeEntry.size))
+                      ? 'text-amber-400'
+                      : 'text-slate-300 dark:text-slate-700 hover:text-amber-400'
+                  }`}
+                  aria-label={isFavorite(favKey(sizeEntry.size)) ? 'Remove from favorites' : 'Add to favorites'}
+                >
+                  {isFavorite(favKey(sizeEntry.size)) ? '★' : '☆'}
+                </button>
+                <button
+                  onClick={() => navigate(`/compare?a=${bike.id}__${sizeEntry.size}`)}
+                  className="text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  Compare →
+                </button>
+              </div>
             </div>
             <div className="px-5 py-4">
               <GeometryTable geometry={sizeEntry.geometry} fitTargets={fitTargets} specs={bike} />
