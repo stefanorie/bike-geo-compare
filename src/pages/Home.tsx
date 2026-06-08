@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { BikeSelector } from '../components/Search/BikeSelector';
 import { SizingSuggestion } from '../components/SizingSuggestion/SizingSuggestion';
-import { bikes } from '../data/bikes';
+import { sortedBikes as bikes } from '../data/bikes';
 import { useFavorites } from '../hooks/useFavorites';
 import type { BikeModel, SizeEntry } from '../data/types';
 

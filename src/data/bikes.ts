@@ -1660,6 +1660,10 @@ export const bikes: BikeModel[] = [
   },
 ];
 
+export const sortedBikes: BikeModel[] = [...bikes].sort((a, b) =>
+  a.brand.localeCompare(b.brand) || a.model.localeCompare(b.model) || a.year - b.year
+);
+
 export function getBikeById(id: string): BikeModel | undefined {
   return bikes.find((b) => b.id === id);
 }
