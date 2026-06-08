@@ -110,7 +110,7 @@ src/
 | Giant | TCR Advanced SL | 2024 | XS–XL (6) | |
 | Cervélo | R5 | 2024 | 44–61 (7) | |
 | Orbea | Orca | 2026 | 47–60 (7) | |
-| Pinarello | Dogma X | 2026 | 43–62 (11) | Standover estimated |
+| Pinarello | Dogma X (Frameset) | 2026 | 43–62 (11) | Frameset only, standover estimated |
 | Pinarello | X1 | 2025 | 43–60 (9) | |
 | Pinarello | X3 | 2025 | 43–60 (9) | |
 | Pinarello | X5 | 2025 | 43–60 (9) | |

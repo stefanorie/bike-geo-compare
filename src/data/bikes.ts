@@ -1567,9 +1567,9 @@ export const bikes: BikeModel[] = [
   {
     id: 'pinarello-dogma-x-2026',
     brand: 'Pinarello',
-    model: 'Dogma X',
+    model: 'Dogma X (Frameset)',
     year: 2026,
-    newPrice: 15600,
+    newPrice: 6700,
     priceSearchUrls: {
       marktplaats: 'https://www.marktplaats.nl/q/pinarello+dogma+x+2026/',
       tweedehands: 'https://www.2dehands.be/q/pinarello+dogma+x+2026/',
