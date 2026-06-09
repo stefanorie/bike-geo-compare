@@ -21,45 +21,49 @@ export function SizingSuggestion() {
   const [results, setResults] = useState<SuggestionResults | null>(null);
   const navigate = useNavigate();
 
+  const hasFitterTargets = !!(profile.fitterStack && profile.fitterReach);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const h = Number(height);
     const i = Number(inseam);
-    if (h > 0 && i > 0 && i < h) {
-      const computed = calcSizingTargets(h, i);
-      const hasFitterTargets = !!(profile.fitterStack && profile.fitterReach);
-      const targets: SizingTargets = hasFitterTargets
-        ? {
-            stackMin: profile.fitterStack! - 15,
-            stackMax: profile.fitterStack! + 15,
-            reachMin: profile.fitterReach! - 15,
-            reachMax: profile.fitterReach! + 15,
-          }
-        : computed;
+    const hasHeight = h > 0 && i > 0 && i < h;
 
-      const matches: SuggestionResults['matches'] = [];
-      for (const bike of bikes) {
-        for (const sizeEntry of bike.sizes) {
-          const mfgMatch =
-            h >= sizeEntry.manufacturerHeightRange[0] && h <= sizeEntry.manufacturerHeightRange[1];
-          const calcMatch =
-            sizeEntry.geometry.stack >= targets.stackMin &&
-            sizeEntry.geometry.stack <= targets.stackMax &&
-            sizeEntry.geometry.reach >= targets.reachMin &&
-            sizeEntry.geometry.reach <= targets.reachMax;
+    if (!hasHeight && !hasFitterTargets) return;
 
-          if (mfgMatch || calcMatch) {
-            matches.push({
-              bikeId: bike.id,
-              label: `${bike.brand} ${bike.model} ${bike.year}`,
-              size: sizeEntry.size,
-              source: mfgMatch && calcMatch ? 'both' : mfgMatch ? 'manufacturer' : 'calculated',
-            });
-          }
+    const computed = hasHeight ? calcSizingTargets(h, i) : { stackMin: 0, stackMax: 0, reachMin: 0, reachMax: 0 };
+    const targets: SizingTargets = hasFitterTargets
+      ? {
+          stackMin: profile.fitterStack! - 15,
+          stackMax: profile.fitterStack! + 15,
+          reachMin: profile.fitterReach! - 15,
+          reachMax: profile.fitterReach! + 15,
+        }
+      : computed;
+
+    const matches: SuggestionResults['matches'] = [];
+    for (const bike of bikes) {
+      for (const sizeEntry of bike.sizes) {
+        const mfgMatch =
+          hasHeight &&
+          h >= sizeEntry.manufacturerHeightRange[0] && h <= sizeEntry.manufacturerHeightRange[1];
+        const calcMatch =
+          sizeEntry.geometry.stack >= targets.stackMin &&
+          sizeEntry.geometry.stack <= targets.stackMax &&
+          sizeEntry.geometry.reach >= targets.reachMin &&
+          sizeEntry.geometry.reach <= targets.reachMax;
+
+        if (mfgMatch || calcMatch) {
+          matches.push({
+            bikeId: bike.id,
+            label: `${bike.brand} ${bike.model} ${bike.year}`,
+            size: sizeEntry.size,
+            source: mfgMatch && calcMatch ? 'both' : mfgMatch ? 'manufacturer' : 'calculated',
+          });
         }
       }
-      setResults({ targets, computed, hasFitterTargets, matches });
     }
+    setResults({ targets, computed: hasHeight ? computed : targets, hasFitterTargets, matches });
   };
 
   const sourceMeta: Record<MatchSource, { label: string; cls: string }> = {
@@ -72,10 +76,15 @@ export function SizingSuggestion() {
 
   return (
     <div className="flex flex-col gap-6">
+      {hasFitterTargets && (
+        <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
+          ✓ Using your fitter targets (stack {profile.fitterStack} mm · reach {profile.fitterReach} mm) — press Find to see matches, or add height + inseam to also include manufacturer size charts.
+        </p>
+      )}
       <form onSubmit={handleSubmit} className="flex flex-wrap gap-3 items-end">
         <div className="flex flex-col gap-1">
           <label className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500">
-            Height (cm)
+            Height (cm){hasFitterTargets && <span className="ml-1 normal-case font-normal">optional</span>}
           </label>
           <input
             type="number"
@@ -89,7 +98,7 @@ export function SizingSuggestion() {
         </div>
         <div className="flex flex-col gap-1">
           <label className="text-xs font-semibold uppercase tracking-widest text-slate-400 dark:text-slate-500">
-            Inseam (cm)
+            Inseam (cm){hasFitterTargets && <span className="ml-1 normal-case font-normal">optional</span>}
           </label>
           <input
             type="number"
