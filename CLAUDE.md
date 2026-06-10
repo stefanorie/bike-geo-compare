@@ -1,4 +1,4 @@
-# Bike Geo Compare — Project Context
+# Dialed — Project Context
 
 ## Communication style
 

@@ -54,7 +54,7 @@ function Nav() {
           <span className="text-blue-600 dark:text-blue-400">
             <WheelIcon />
           </span>
-          <span className="hidden sm:inline">BikeGeo</span>
+          <span className="hidden sm:inline">Dialed</span>
         </Link>
 
         <nav className="flex items-center gap-2 sm:gap-5">
