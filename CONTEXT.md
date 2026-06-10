@@ -1,4 +1,4 @@
-# BikeGeo — Domain Glossary
+# Dialed — Domain Glossary
 
 ## Bike Model
 A specific road bike identified by brand, model name, and model year. Contains one or more Size
