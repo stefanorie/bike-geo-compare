@@ -1,5 +1,6 @@
 import type { BikeModel, GeometryValues } from '../../data/types';
 import { GEOMETRY_LABELS, GEOMETRY_UNITS } from '../../data/types';
+import { formatDelta } from '../../utils/format';
 
 interface FitTargets {
   stack?: number;
@@ -68,7 +69,7 @@ export function GeometryTable({ geometry, fitTargets, specs }: Props) {
                 <span className="text-slate-400 dark:text-slate-600 ml-1 text-xs">{GEOMETRY_UNITS[key]}</span>
                 {delta !== null && (
                   <span className={`ml-2 text-xs px-1.5 py-0.5 rounded font-semibold ${deltaBadgeCls(Math.abs(delta))}`}>
-                    {delta > 0 ? '+' : ''}{delta} mm
+                    {delta > 0 ? '+' : ''}{formatDelta(delta)} mm
                   </span>
                 )}
               </td>

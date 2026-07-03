@@ -1,5 +1,6 @@
 import type { BikeModel, GeometryValues } from '../../data/types';
 import { GEOMETRY_LABELS, GEOMETRY_UNITS } from '../../data/types';
+import { formatDelta } from '../../utils/format';
 
 interface FitTargets {
   stack?: number;
@@ -34,7 +35,7 @@ function FitBadge({ bikeVal, target }: { bikeVal: number; target: number }) {
     'text-red-500 dark:text-red-400 bg-red-50 dark:bg-red-950/60';
   return (
     <span className={`ml-1.5 text-xs px-1.5 py-0.5 rounded font-semibold ${cls}`}>
-      {delta > 0 ? '+' : ''}{delta}
+      {delta > 0 ? '+' : ''}{formatDelta(delta)}
     </span>
   );
 }
@@ -88,7 +89,7 @@ export function CompareTable({ bikeALabel, bikeBLabel, geometryA, geometryB, fit
                         <span className="text-slate-300 dark:text-slate-700">—</span>
                       ) : (
                         <span className={delta > 0 ? 'text-emerald-600 dark:text-emerald-400' : 'text-red-500 dark:text-red-400'}>
-                          {delta > 0 ? '+' : ''}{delta}{unit && <span className="text-slate-300 dark:text-slate-700 ml-0.5">{unit}</span>}
+                          {delta > 0 ? '+' : ''}{formatDelta(delta)}{unit && <span className="text-slate-300 dark:text-slate-700 ml-0.5">{unit}</span>}
                         </span>
                       )}
                     </td>
@@ -106,7 +107,6 @@ export function CompareTable({ bikeALabel, bikeBLabel, geometryA, geometryB, fit
             const a = geometryA[key];
             const b = geometryB[key];
             const delta = b - a;
-            const isAngle = GEOMETRY_UNITS[key] === '°';
             const fitTarget = (key === 'stack' || key === 'reach') ? fitTargets?.[key] : undefined;
 
             return (
@@ -128,7 +128,7 @@ export function CompareTable({ bikeALabel, bikeBLabel, geometryA, geometryB, fit
                       ? 'text-emerald-600 dark:text-emerald-400'
                       : 'text-red-500 dark:text-red-400'
                     }>
-                      {delta > 0 ? '+' : ''}{isAngle ? delta.toFixed(1) : delta}
+                      {delta > 0 ? '+' : ''}{formatDelta(delta)}
                       <span className="text-slate-300 dark:text-slate-700 ml-0.5">{GEOMETRY_UNITS[key]}</span>
                     </span>
                   )}
