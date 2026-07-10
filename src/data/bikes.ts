@@ -1679,6 +1679,81 @@ export const bikes: BikeModel[] = [
     ],
   },
 
+  // ── Pinarello Dogma F 2026 ────────────────────────────────────────────────
+  // Geometry (stack, reach, angles, chainstay, head tube, BB drop, seat tube) from
+  // pinarello.com official geometry table. Wheelbase from manufacturer data for the
+  // unchanged Dogma F frame (2024 model uses the same 11 sizes/geometry).
+  // Standover height estimated (not published by Pinarello) and rider height ranges
+  // sourced from a third-party Pinarello sizing guide — adjust if you have better data.
+  {
+    id: 'pinarello-dogma-f-2026',
+    brand: 'Pinarello',
+    model: 'Dogma F',
+    year: 2026,
+    maxTireClearance: 30,
+    priceSearchUrls: {
+      marktplaats: 'https://www.marktplaats.nl/q/pinarello+dogma+f+2026/',
+      tweedehands: 'https://www.2dehands.be/q/pinarello+dogma+f+2026/',
+    },
+    sizes: [
+      {
+        size: 'XS',
+        manufacturerHeightRange: [155, 165],
+        geometry: { stack: 502, reach: 351.5, headTubeAngle: 69.5, seatTubeAngle: 74.4, chainstayLength: 407, wheelbase: 965.4, bbDrop: 67, standoverHeight: 698, headTubeLength: 102, seatTubeLength: 430 },
+      },
+      {
+        size: 'S',
+        manufacturerHeightRange: [163, 169],
+        geometry: { stack: 517.3, reach: 365.4, headTubeAngle: 70.5, seatTubeAngle: 74.4, chainstayLength: 407, wheelbase: 973.5, bbDrop: 72, standoverHeight: 727, headTubeLength: 109, seatTubeLength: 465 },
+      },
+      {
+        size: 'M',
+        manufacturerHeightRange: [167, 173],
+        geometry: { stack: 525.2, reach: 372.2, headTubeAngle: 71.4, seatTubeAngle: 74, chainstayLength: 407, wheelbase: 974.9, bbDrop: 72, standoverHeight: 760, headTubeLength: 114, seatTubeLength: 500 },
+      },
+      {
+        size: 'M/L',
+        manufacturerHeightRange: [170, 176],
+        geometry: { stack: 532.1, reach: 378.2, headTubeAngle: 72, seatTubeAngle: 73.7, chainstayLength: 407, wheelbase: 977.7, bbDrop: 72, standoverHeight: 773, headTubeLength: 119, seatTubeLength: 515 },
+      },
+      {
+        size: 'L',
+        manufacturerHeightRange: [173, 178],
+        geometry: { stack: 542.4, reach: 383.3, headTubeAngle: 72.5, seatTubeAngle: 73.7, chainstayLength: 407, wheelbase: 983.8, bbDrop: 72, standoverHeight: 788, headTubeLength: 128, seatTubeLength: 530 },
+      },
+      {
+        size: 'L/XL',
+        manufacturerHeightRange: [176, 181],
+        geometry: { stack: 551, reach: 385.3, headTubeAngle: 72.8, seatTubeAngle: 73.4, chainstayLength: 408, wheelbase: 984.4, bbDrop: 72, standoverHeight: 797, headTubeLength: 136, seatTubeLength: 540 },
+      },
+      {
+        size: 'XL',
+        manufacturerHeightRange: [178, 183],
+        geometry: { stack: 561.5, reach: 389.2, headTubeAngle: 72.8, seatTubeAngle: 73.4, chainstayLength: 408, wheelbase: 991.5, bbDrop: 72, standoverHeight: 806, headTubeLength: 147, seatTubeLength: 550 },
+      },
+      {
+        size: 'XL/XXL',
+        manufacturerHeightRange: [180, 186],
+        geometry: { stack: 570.1, reach: 390.8, headTubeAngle: 73.2, seatTubeAngle: 73, chainstayLength: 409, wheelbase: 992.9, bbDrop: 72, standoverHeight: 815, headTubeLength: 154.5, seatTubeLength: 560 },
+      },
+      {
+        size: 'XXL',
+        manufacturerHeightRange: [183, 190],
+        geometry: { stack: 584.8, reach: 396.7, headTubeAngle: 73.7, seatTubeAngle: 73, chainstayLength: 409, wheelbase: 998.2, bbDrop: 72, standoverHeight: 829, headTubeLength: 168, seatTubeLength: 575 },
+      },
+      {
+        size: '3XL',
+        manufacturerHeightRange: [188, 195],
+        geometry: { stack: 613.2, reach: 393.4, headTubeAngle: 73.4, seatTubeAngle: 72.4, chainstayLength: 409, wheelbase: 1008.8, bbDrop: 67, standoverHeight: 851, headTubeLength: 204, seatTubeLength: 595 },
+      },
+      {
+        size: '4XL',
+        manufacturerHeightRange: [194, 205],
+        geometry: { stack: 651.6, reach: 410, headTubeAngle: 73.4, seatTubeAngle: 72, chainstayLength: 411, wheelbase: 1038.8, bbDrop: 67, standoverHeight: 874, headTubeLength: 244, seatTubeLength: 620 },
+      },
+    ],
+  },
+
   // ── Yoeleo R12 (Frameset) 2026 ────────────────────────────────────────────
   // Geometry from Yoeleo product page. Frameset only — no groupset included.
   // Standover height estimated (not published by manufacturer).
