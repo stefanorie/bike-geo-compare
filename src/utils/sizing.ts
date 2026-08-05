@@ -12,8 +12,14 @@ export function calcSizingTargets(heightCm: number, inseamCm: number): SizingTar
 
   // Stack: roughly 67-70% of inseam in mm
   const stackBase = inseamCm * 6.8;
-  // Reach: roughly based on torso + arm length approximation
-  const reachBase = (torsoLength * 0.45 + heightCm * 0.1) * 10 * 0.5;
+
+  // Reach: primarily driven by height, calibrated against manufacturer size
+  // charts (reach ~= height * 1.05 + 199, fit against real geometry data).
+  // A small adjustment accounts for a torso longer/shorter than the average
+  // proportion (~50.5% of height) for that height.
+  const expectedTorsoForHeight = heightCm * 0.505;
+  const torsoAdjustment = (torsoLength - expectedTorsoForHeight) * 3;
+  const reachBase = heightCm * 1.05 + 199 + torsoAdjustment;
 
   const tolerance = 15;
 
